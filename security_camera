@@ -1,0 +1,13 @@
+#!/bin/bash
+# Basic security camera program
+# Records 24 one hour video segments repeatedly
+
+while : 
+do
+ for i in {0..167}
+ do
+  ffmpeg -y -f v4l2 -framerate 5 -s 640x480 -t 01:00:00 -i /dev/video0 \
+-vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf: \
+text='%{localtime}': fontcolor=white@0.8: x=7: y=7" video_$i.avi
+ done
+done

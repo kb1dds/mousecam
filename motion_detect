@@ -1,0 +1,15 @@
+#!/bin/bash
+# Motion detect all AVI files in a directory
+
+for fl in `ls *.avi | cut -f1 -d'.'`
+do
+  dvr-scan -i $fl.avi -o $fl'_motion_only.avi' -t 0.5 -l 3
+done
+
+find . -size 0 -delete
+
+for i in `ls *_motion_only.avi`; do echo 'file '$i; done > templist.txt
+
+ffmpeg -f concat -i templist.txt -c copy motion_only.avi
+
+rm templist.txt

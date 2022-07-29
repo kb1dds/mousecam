@@ -32,4 +32,4 @@ Timestamps are placed on the upper-left corner of the video frame.
 
 It is not generally a good idea to play the videos on the Pi as this loads the network and the Pi.  Instead, copy the desired video files to another machine for inspection (use `scp` with regexes for file names).  The `vlc` player works well.
 
-The `motion_detect` script will detect motion on every AVI file in a directory.  This is helpful if the mice visit infrequently.
+The `motion_detect` script will detect motion on every AVI file in a directory.  This is helpful if the mice visit infrequently.  This script uses `dvr-scan`: [https://github.com/Breakthrough/DVR-Scan].

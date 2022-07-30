@@ -25,6 +25,7 @@ and then add the line:
 $ touch /boot/ssh
 ```
 This will enable to ssh server that you just installed.
+
 7. Put the SD card back in the Pi and power it on.  Everything should be running at this point; you can check this by ssh'ing into the Pi as user `pi`.
 
 ## Default behavior

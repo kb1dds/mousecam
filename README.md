@@ -20,7 +20,12 @@ and then add the line:
 ```
 @reboot /home/pi/security_camera >/dev/null 2>&1
 ```
-6. Reboot the Pi.  Everything should be running at this point; you can check this by ssh'ing into the Pi as user `pi`.
+6. Power off the Pi, and move the SD card to another computer.  In the `/boot` directory of the SD card, run
+```
+$ touch /boot/ssh
+```
+This will enable to ssh server that you just installed.
+7. Put the SD card back in the Pi and power it on.  Everything should be running at this point; you can check this by ssh'ing into the Pi as user `pi`.
 
 ## Default behavior
 

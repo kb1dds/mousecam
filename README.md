@@ -20,7 +20,7 @@ and then add the line:
 ```
 @reboot /home/pi/security_camera >/dev/null 2>&1
 ```
-6. Power off the Pi, and move the SD card to another computer.  In the `/boot` directory of the SD card, run
+6. Power off the Pi, and move the SD card to another computer.  In the `/bootfs` directory of the SD card, run
 ```
 $ touch /boot/ssh
 ```
